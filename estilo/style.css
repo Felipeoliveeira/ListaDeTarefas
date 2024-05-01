@@ -8,7 +8,10 @@
 body{
     height: 100vh;
     background-color: rgb(34, 34, 34);
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 
 header{
@@ -21,15 +24,10 @@ header{
 }
 
 section{
-    width: 370px;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%,-50%);
-    position: absolute;
+    width: 390px;
     border: 1px solid grey;
     padding: 12px;
     border-radius: 4px;
-    text-align: center;
 }
 #task{
     height: 40px;
@@ -41,20 +39,31 @@ section{
     padding-left: 15px;
 }
 
-label{
-    padding: 12px;
-    margin-left: 10px;
+#button{
     font-weight: bolder;
     font-size: 1rem;
-    color: white;
-    background-color: rgba(68, 67, 67, 0.548);
-    border-radius: 45%;
+    width: 45px;
+    margin-left: 15px;
+    padding: 13px;
+    border-radius: 50%;
+    background-color: rgb(59, 59, 59);
+    border: transparent;
     &:hover{
-        color: black;
         cursor: pointer;
-        background-color: rgb(34, 34, 34);
+        color: white;
     }
 }
 li{
     list-style-type: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(59, 59, 59);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ol{
+    color: whitesmoke;
+    margin-top: 10px;
+    padding: 10px;
 }

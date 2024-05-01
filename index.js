@@ -1,16 +1,36 @@
+const localStorageKey = 'to-do-list-fo';
+const list = document.getElementById('list')
+
 function adicionar(){
-    let button = document.getElementById('button');
-    let list = document.getElementById('list');
     let task = document.getElementById('task').value;
-    let novoItem =[ ];
-
-    if(task == ""){
+    //validação de tarefa adicionada
+    if(!task){
         alert('Adicione uma tarefa');
-    }else if(task.includes(list)){
-        alert('Tarefa já inclusa')
+    }else{
+        //incremento no localStorage
+        let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
+        values.push({
+         name: task
+        });
+        localStorage.setItem(localStorageKey,JSON.stringify(values))
+        showValues()
     }
+}   
 
-    novoItem.push(task);
-    list.innerText = novoItem + ',' + novoItem;
-    console.log(task);
+function showValues(){
+    let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
+    list.innerHTML ='';
+    for(i = 0;i < values.length; i++){
+        list.innerHTML += `<li>${values[i]['name']} <button id = "btn-ok" onclick="removeItem('${values[i]['name']}')">ok</button></li>`
+    }
+    console.log(values)
 }
+
+function removeItem(data){
+    let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+    let index = values.findIndex(x => x.name == data);
+    values.splice(index,1);
+    localStorage.setItem(localStorageKey,JSON.stringify(values))
+    showValues()
+}
+showValues()
