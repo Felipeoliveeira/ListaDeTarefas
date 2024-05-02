@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(34, 34, 34);
+    font-family: "Lato", sans-serif;
+    color: whitesmoke;
+}
+header{
+    width: 500px;
+}
+section{
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1rem;
+}
+div{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+input{
+    padding: 8px;
+    height: 20px;
+    border-radius: 8px;
+}
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    
+}

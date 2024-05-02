@@ -1,6 +1,21 @@
 const localStorageKey = 'to-do-list-fo';
+const localStorageName = 'nome-usuario';
 const list = document.getElementById('list')
-
+//recuperando nome
+function nomeUsuario(){
+    location.href = 'ToDoList.html'
+    let nome = document.getElementById('input').value;
+    localStorage.setItem(localStorageName, JSON.stringify(nome));
+}
+//mostrando nome
+function showName(){
+    let usuario = document.getElementById('usuario');
+    let nameUsuario = JSON.parse(localStorage.getItem(localStorageName));
+    console.log(nameUsuario)
+    usuario.innerText = `To do List | ${nameUsuario}`
+}
+showName()
+//recuperando hora e mostrando
 function mostrarHora(){
     let horaAtual = new Date().getHours();
     let minutoAtual = new Date().getMinutes();
@@ -34,7 +49,6 @@ function showValues(){
     for(i = 0;i < values.length; i++){
         list.innerHTML += `<li>${values[i]['name']} <button id = "btn-ok" onclick="removeItem('${values[i]['name']}')">\u{2705}</button></li>`
     }
-    console.log(values)
 }
 //remoção de dado direto no locaStorage
 function removeItem(data){
