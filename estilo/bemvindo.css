@@ -11,16 +11,22 @@ body{
     font-family: "Lato", sans-serif;
     color: whitesmoke;
 }
-header{
-    width: 500px;
+h1{
+    text-align: center;
+    margin-top: 20px;
 }
 section{
+    height: 250px;
+    width: 100%;
     text-align: center;
     line-height: 50px;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
+    border: 1px solid grey;
+    padding: 20px;
+    border-radius: 5px;
 }
 h1{
     font-size: 2rem;
@@ -32,18 +38,18 @@ h3{
     font-size: 1rem;
 }
 div{
+    margin-top: 55px;
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 input{
     padding: 8px;
     height: 20px;
     border-radius: 8px;
 }
-button{
+#button{
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
-    
+    margin-left: 20px;w
 }
