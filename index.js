@@ -11,7 +11,6 @@ function nomeUsuario(){
 function showName(){
     let usuario = document.getElementById('usuario');
     let nameUsuario = JSON.parse(localStorage.getItem(localStorageName));
-    console.log(nameUsuario)
     usuario.innerText = `To do List | ${nameUsuario}`
 }
 showName()
