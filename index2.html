@@ -12,7 +12,7 @@
 <body>
     <div class="todo-container">
             <h1>Todo Avançado</h1>
-            <form id="todo-form">
+            <form id="todo-form" class="hiden">
                 <p>Adicione uma tarefa:</p>
                 <div class="form-control">
                     <input type="text" id="todo-input" placeholder="O que você vai fazer?">
@@ -21,9 +21,9 @@
                     </button>
                 </div>
             </form>
-            <form id="edit-todo">
+            <form id="edit-form">
                 <p>Edite sua tarefa</p>
-                <div class="edit-control">
+                <div class="form-control">
                     <input type="text" id="edit-input"></input>
                     <button type="submit">
                         <i class="fa-solid fa-check-double"></i>
@@ -48,14 +48,20 @@
                     <option value="todo">A Fazer</option>
                 </select>
             </div>
-    </div>
-    <div class="tdo-list">
-        <div class="todo">
-            <h3>Estou fazendo algo..</h3>
-                <button class="finish-todo"><i class="fa-solid fa-check"></i></button>
-                <button class="edit-todo"><i class="fa-solid fa-pen"></i></button>
-                <button class="remove-todo"><i class="fa-solid fa-pen"></i></button>
-        </div>
+            <div class="tdo-list">
+                <div class="todo">
+                    <h3>Estou fazendo algo..</h3>
+                        <button class="finish-todo"><i class="fa-solid fa-check"></i></button>
+                        <button class="edit-todo"><i class="fa-solid fa-pen"></i></button>
+                        <button class="remove-todo"><i class="fa-solid fa-pen"></i></button>
+                </div>
+                <div class="todo">
+                    <h3>Estou fazendo algo..</h3>
+                        <button class="finish-todo"><i class="fa-solid fa-check"></i></button>
+                        <button class="edit-todo"><i class="fa-solid fa-pen"></i></button>
+                        <button class="remove-todo"><i class="fa-solid fa-pen"></i></button>
+                </div>
+            </div>
     </div>
 </body>
 </html>

@@ -24,18 +24,62 @@ button{
     justify-content: center;
     align-items: center;
     transition: 0.4s;
-}
-
-button:hover{
+&:hover{
     background-color: #102f5e;
 }
-
-i:hover{
-    color: #fff;
 }
 
 i{
     color: #102f5e;
     font-weight: bold;
     pointer-events: none;
+&hover{
+    color: #fff;
+}
+}
+
+input, select{
+    padding: 0.25rem 0.5rem;
+}
+
+/* .hiden{
+    display: none;
+} */
+
+/* Todo header */
+
+.todo-container{
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #ccdde0d5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.todo-container h1{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 2px solid white;
+}
+
+/* Todo Form */
+
+#todo-form, #edit-form{
+    padding: 1rem;
+    border-bottom: 2px solid white;
+}
+
+#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control{
+    display: flex;
+}
+.form-control input{
+    margin-right: 0.3rem;
+}
+#cancel-edit-btn{
+    margin-top: 1rem;
 }
